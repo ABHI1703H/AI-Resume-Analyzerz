@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Analysis Result</h1>
+            <p>Here is the detailed analysis of your resume</p>
+        </div>
+        <div class="result-section">
+            <h2>Personal Information</h2>
+            <p><strong>Name:</strong> {{ info.name }}</p>
+            <p><strong>Email:</strong> {{ info.email }}</p>
+            <p><strong>Phone:</strong> {{ info.phone }}</p>
+
+            <h2>Skills</h2>
+            <ul>
+                {% for skill in info.skills %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+
+            <h2>Awards & Recognitions</h2>
+            <ul>
+                {% for award in info.awards %}
+                    <li>{{ award }}</li>
+                {% endfor %}
+            </ul>
+
+            <h2>Projects</h2>
+            <ul>
+                {% for project in info.projects %}
+                    <li>{{ project }}</li>
+                {% endfor %}
+            </ul>
+
+            <h2>Score</h2>
+            <p>{{ score }}</p>
+
+            <h2>Feedback</h2>
+            <p>{{ feedback }}</p>
+
+            <a href="/" class="btn">Analyze Another Resume</a>
+        </div>
+    </div>
+</body>
+</html>

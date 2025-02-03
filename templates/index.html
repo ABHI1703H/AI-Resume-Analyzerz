@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AI Resume Analyzer</h1>
+            <p>Upload your resume to get a comprehensive analysis</p>
+        </div>
+        <div class="upload-section">
+            <form action="/analyze" method="post" enctype="multipart/form-data">
+                <input type="file" name="resume" id="resume" class="inputfile" accept="application/pdf">
+                <label for="resume"><i class="fas fa-upload"></i> Choose a file</label>
+                <button type="submit" class="btn">Analyze Resume</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('#resume').addEventListener('change', function(){
+            document.querySelector('label[for="resume"]').textContent = this.files[0].name;
+        });
+    </script>
+</body>
+</html>

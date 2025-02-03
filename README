@@ -1,0 +1,54 @@
+📝 AI Resume Analyzer
+An AI-powered Resume Analyzer built using Flask, spaCy, and PyPDF2. This web application extracts key details from resumes, matches skills with job requirements, and provides feedback based on a calculated score.
+
+🚀 Features
+✅ Extracts Name, Email, Phone Number, Skills, Awards, and Projects
+✅ Uses Natural Language Processing (NLP) for entity extraction
+✅ Matches resume skills with required job roles
+✅ Analyzes experience and calculates a resume score
+✅ Provides personalized feedback to improve resumes
+
+📌 Tech Stack
+Python
+Flask (Web Framework)
+spaCy (NLP)
+PyPDF2 (PDF Text Extraction)
+HTML/CSS (Frontend)
+🔧 Installation
+1️⃣ Clone the repository:
+
+bash
+Copy
+Edit
+git clone https://github.com/your-username/resume-analyzer.git
+cd resume-analyzer
+2️⃣ Install dependencies:
+
+bash
+Copy
+Edit
+pip install flask spacy PyPDF2
+python -m spacy download en_core_web_sm
+3️⃣ Run the Flask app:
+
+bash
+Copy
+Edit
+python app.py
+4️⃣ Open in your browser:
+
+cpp
+Copy
+Edit
+http://127.0.0.1:5000/
+📂 Usage
+Upload a resume PDF
+The app will extract information and analyze skills, experience, and projects
+Get a resume score and improvement feedback
+🖥️ Screenshots
+(Add screenshots of your app interface)
+
+🏆 Future Enhancements
+Support for more job roles
+Improve experience analysis with NLP
+Add resume formatting suggestions
